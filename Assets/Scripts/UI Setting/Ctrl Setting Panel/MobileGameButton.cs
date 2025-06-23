@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class MobileGameButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private UiSetting uiSetting;
+    private GameObject MobileGameActivate;
+    public void _On_Mobile_Mod()
     {
-        
-    }
+        if (this.MobileGameActivate == null) this.MobileGameActivate = this.uiSetting.MobileGameActivate;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (this.MobileGameActivate.activeSelf)
+        {
+            this.MobileGameActivate.SetActive(false);
+            this.uiSetting.UI_Mobile.SetActive(false);
+            PlayerPrefs.SetInt("MobileCtrl", 0);
+            Debug.Log(PlayerPrefs.GetInt("MobileCtrl"));
+        }
+        else
+        {
+            this.MobileGameActivate.SetActive(true);
+            this.uiSetting.UI_Mobile.SetActive(true);
+            PlayerPrefs.SetInt("MobileCtrl", 1);
+            Debug.Log(PlayerPrefs.GetInt("MobileCtrl"));
+        }
     }
 }
