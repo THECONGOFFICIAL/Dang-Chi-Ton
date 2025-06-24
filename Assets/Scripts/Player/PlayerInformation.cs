@@ -15,6 +15,10 @@ public class PlayerInformation : InformationVir
     public float WalkingSpeed = 7f;
     public float MaxSpeed = 14f;
 
+    [Header("Jump")]
+    public float JumpForce = 7f;
+    public int NumberOfJumps = 2;
+
     public void _Setup()
     {
         this.playerCenter.gameObject.SetActive(true);
