@@ -13,6 +13,10 @@ public class InformationVir : MonoBehaviour
     public float CurrentHp = 0f;
     public float MaxHp = 100f;
     public Image HpBar;
+
+    [Header("Damage")]
+    public float Damage = 10f;
+
     public virtual void Start()
     {
         this.CurrentHp = this.MaxHp;

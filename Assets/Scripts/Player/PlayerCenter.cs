@@ -9,6 +9,7 @@ public class PlayerCenter : MonoBehaviour
     public PlayerMovement playerMovement;
     public PlayerJump playerJump;
     public PlayerCamera playerCamera;
+    public PlayerAttackCtrl playerAttackCtrl;
 
     [Header("UI Links")]
     public UiStatus uiStatus;
@@ -32,5 +33,8 @@ public class PlayerCenter : MonoBehaviour
 
         this.playerCamera = GetComponent<PlayerCamera>();
         this.playerCamera.playerCenter = this;
+
+        this.playerAttackCtrl = GetComponent<PlayerAttackCtrl>();
+        this.playerAttackCtrl.playerCenter = this;
     }
 }
