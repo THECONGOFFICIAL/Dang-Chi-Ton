@@ -69,6 +69,10 @@ public class PlayerMovement : MonoBehaviour
         {
             if (this.playerCenter.playerInformation.CheckGround)
             {
+                if(this.playerCenter.NotMoveAnimation) {
+                    this.playerCenter.playerInformation.myAnim.SetTrigger("Return Move");
+                    this.playerCenter.NotMoveAnimation = false;
+                }
                 Quaternion toRotation = Quaternion.LookRotation(rotate, Vector3.up);
                 this.playerCenter.playerInformation.transform.rotation = Quaternion.Slerp(this.playerCenter.playerInformation.transform.rotation, toRotation, 10f * Time.deltaTime);
             }

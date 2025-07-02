@@ -11,6 +11,9 @@ public class PlayerCenter : MonoBehaviour
     public PlayerCamera playerCamera;
     public PlayerAttackCtrl playerAttackCtrl;
 
+    [Header("Animation")]
+    public bool NotMoveAnimation = false;
+
     [Header("UI Links")]
     public UiStatus uiStatus;
     public UiSetting uiSetting;

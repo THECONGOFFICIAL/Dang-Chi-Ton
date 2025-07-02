@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7776690027370127309}
-  - component: {fileID: 8356176378508163884}
+  - component: {fileID: 6372531523907750906}
   m_Layer: 0
   m_Name: Katana 0001
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   - {fileID: 1612008110409997141}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8356176378508163884
+--- !u!114 &6372531523907750906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -51,7 +51,7 @@ MonoBehaviour:
   Attack3Anim: {fileID: 0}
   Damage: 0
   CritDamage: 1.2
-  ResetAnimationHit: 0
+  TimeDelayAttack: 0.3
 --- !u!1001 &1285137402351074494
 PrefabInstance:
   m_ObjectHideFlags: 0
